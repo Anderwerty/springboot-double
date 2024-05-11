@@ -9,7 +9,7 @@ public class UserValidator {
 
     public void validateUserRegistration(UserRegistrationDto user) {
         if (user == null || !user.getPassword().equals(user.getRepeatedPassword())) {
-            throw new RegistrationRuntimeException();
+            throw new RegistrationRuntimeException("password and repeated password should be the same");
         }
         // password pattern
         // email pattern
