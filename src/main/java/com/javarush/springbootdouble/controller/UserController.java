@@ -63,10 +63,12 @@ public class UserController {
 
     // GET .. /users?page=1&perPage=10
     // GET  /users?page=blabla&perPage=
+    private  Integer userPage;
     @GetMapping("/users")
     public List<UserDto> getAllUsers(@RequestParam(defaultValue = "1", name = "page", required = false) String page,
                                      @RequestParam(defaultValue = "10", name = "perPage", required = false) String perPage) {
-        Integer userPage = convert(page, 1);
+//        Integer userPage = convert(page, 1);
+         userPage = convert(page, 1);
         Integer userPerPage = convert(perPage, 10);
 
         Page<UserDto> usersPage = userService.findAll(userPage - 1, userPerPage);

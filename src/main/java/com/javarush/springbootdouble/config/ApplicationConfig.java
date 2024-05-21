@@ -7,15 +7,15 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
 import javax.sql.DataSource;
 
-@Configuration
+//@Configuration
 public class ApplicationConfig {
 
-    @Bean
-    public DataSource dataSource() {
-        return new EmbeddedDatabaseBuilder()
-                .setType(EmbeddedDatabaseType.H2)
-                .generateUniqueName(true)
-                .addScripts("schema.sql", "data.sql")
-                .build();
-    }
+//    @Bean
+//    public DataSource dataSource() {
+//        return new EmbeddedDatabaseBuilder()
+//                .setType(EmbeddedDatabaseType.H2)
+//                .generateUniqueName(true)
+//                .addScripts("schema.sql", "data.sql")
+//                .build();
+//    }
 }
